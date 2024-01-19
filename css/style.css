@@ -1,0 +1,389 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+
+}
+
+/* navbar */
+.nav {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+  height: 100px;
+}
+
+.nav-logo {
+  max-width: 100%;
+  height: 100px;
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+}
+
+.nav-content img {
+  width: 90%;
+  height: 100px;
+  margin-left: 30px;
+}
+
+.nav-content {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: start;
+  z-index: 1;
+  height: 130px;
+
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  margin-left: 15rem;
+  padding-top: 15px;
+}
+
+.nav-links li {
+  margin-right: 25px;
+  padding-left: 25px;
+
+}
+
+.nav-links a {
+  color: rgb(19, 149, 149);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding-top: 10px;
+  /* Add a smooth transition effect */
+}
+
+.nav-links a:hover {
+  color: rgb(23, 33, 37);
+  /* Change the color on hover */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 20px;
+  ;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(19, 149, 149);
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.nav-button {
+  position: relative;
+  overflow: hidden;
+  padding: .5rem 1rem;
+  border-radius: 1.5rem;
+  background: rgb(19, 149, 149);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  margin-left: 20px;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-content {
+
+    padding-right: 10px;
+    /* Add some padding to separate logo from hamburger */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    margin: 0;
+    z-index: 99999;
+    background-color: rgb(148, 172, 172);
+  }
+
+  .nav-links.show {
+    display: flex;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-top: 40px;
+    margin-left: 10rem;
+  }
+}
+
+
+/* navbar ends */
+
+/* home section */
+
+.home-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: none;
+
+}
+
+.background-image.active {
+  left: 0;
+  /* Move to the left for active image */
+  display: block;
+  opacity: 1;
+  /* Show the active image */
+  transition: left 5s ease-in-out, opacity 5s ease-in-out;
+  /* Add transition for smooth effect */
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .background-image {
+    width: 100%;
+    height: 80vh;
+
+  }
+}
+
+/* home section ends */
+
+
+/* home-about-section */
+.home-about-section-div {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+
+.home-about-section {
+  max-width: 1440px;
+  width: 80%;
+  display: flex;
+}
+
+.about-intro {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-about-first-tsxt {
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: rgb(19, 149, 149);
+  margin-bottom: 1px;
+
+}
+
+
+
+.about-intro h1 {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 3rem;
+  margin-top: 10px;
+
+}
+
+span.takeoff {
+  color: rgb(19, 149, 149);
+}
+
+.about-p {
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: black;
+  margin-top: 8px;
+  line-height: 1.5;
+
+}
+
+.home-about-img {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+
+.home-about-img img {
+  width: 80%;
+  height: auto;
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 3rem;
+  padding: 0 1rem;
+  border-radius: 1.5rem;
+  background: rgb(19, 149, 149);
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: black;
+  transition: all 0.475s;
+}
+
+
+@media (max-width: 1020px) {
+  .home-about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+  }
+
+  .home-about-img {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  .about-intro {
+    width: 100%;
+    padding: 0;
+  }
+
+  .home-about-section {
+    box-shadow: none;
+  }
+
+  .home-about-img img {
+    width: 100%;
+  }
+}
+
+/* home-about-section ends */
+
+/* popular tours section */
+.popular-tours-main-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.popular-tours-div {
+  max-width: 1440px;
+  width: 80%;
+  display: flex;
+}
+
+.popheading {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(19, 149, 149);
+  margin: 1px
+}
+
+.popheading2 {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 3rem;
+}
+span.tours{
+  color:rgb(19, 149, 149);
+}
+.tour-spots{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tour-spotsR1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tour-spots img{
+  width: 100%;
+}
+
+/* popular tours section ends*/
