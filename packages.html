@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takeoff</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6c53136549.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .tour-package-main {
+            background-color: #fff;
+            border: .8px solid rgba(0, 0, 0, 0.411);
+            border-radius: 20px;
+            margin: 15px;
+            padding: 20px;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .tour-package {
+
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        }
+
+        .tour-img {
+            width: 30%;
+        }
+
+        .tour-img img {
+            width: 90%;
+            border-radius: 8px;
+            height: 100%;
+        }
+
+        .tour-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tour-details h3 {
+            color: black;
+            margin-bottom: 5px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .tour-details .price {
+            color: black;
+            font-weight: 500;
+            font-size: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tour-details p {
+            color: #666;
+        }
+
+        .tour-details .rating {
+            font-weight: 500;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: black;
+        }
+
+        .more-details-btn {
+            border: 0;
+            background: transparent;
+            text-align: left;
+            top: 10px;
+            left: 10px;
+            color: #050505;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .show-less-btn {
+            text-decoration: underline;
+            color: #050505;
+            cursor: pointer;
+        }
+
+        .book-now-btn {
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            width: 125px;
+            height: 2.5rem;
+            padding: 0 1rem;
+            border-radius: 1.5rem;
+            background: rgb(19, 149, 149);
+            background-size: 400%;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .additional-details {
+            margin-top: 10px;
+            /* Adjust margin-top as needed */
+            color: #666;
+        }
+
+        .additional-details h5 {
+            color: black;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 1.4rem;
+        }
+
+        .additional-details h6 {
+            color: rgb(19, 149, 149);
+            margin-bottom: 5px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 1.1rem;
+        }
+
+        .additional-details .package-li {
+            color: rgb(19, 149, 149);
+            margin-bottom: 5px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .tour-package-main {
+                width: 90%;
+            }
+
+            .tour-package {
+                flex-direction: column;
+            }
+
+            .tour-img {
+                width: 100%;
+            }
+
+            .tour-img img {
+                width: 100%;
+            }
+
+            .tour-details {
+                padding-left: 20px;
+                /* Adjust as needed */
+            }
+
+            .tour-details p {
+                margin-bottom: 25px;
+
+            }
+
+            .book-now-btn {
+                right: 10px;
+                margin-left: 10px;
+                /* Adjust as needed */
+            }
+
+            .tour-details h3 {
+                margin-top: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-container">
+        <!-- The header content will be inserted here -->
+    </div>
+
+    <!-- hero start-->
+    <div class="package_sec1">
+        <div class="about_sec1_row row">
+            <div class="about_sec1_text_container col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 animate fadeInDown">
+                <h2>OUR PACKAGES</h2>
+                <h3>At Takeoff travels, we believe that travel is not just about reaching a destination;
+                    it's about the experiences, memories, and adventures that shape our lives. </h3>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+            </div>
+        </div>
+    </div>
+    <!-- hero end-->
+
+    <div class="about_sec2">
+        <div class="about_sec2_text_container animate fadeInDown">
+            <h4>LETS FLY</h4>
+            <h5>OUR<span class="default_blue_text"> PACKAGES</span></h5>
+            <h6>Welcome to an enchanting world of possibilities! Our Packages page is where dreams take flight and
+                unforgettable journeys begin. At Takeoff travels, we understand that every traveler is unique, and so
+                are their desires for the perfect getaway. </h6>
+        </div>
+    </div>
+
+    <section>
+        <!-- first package -->
+        <div class="tour-package-main animate fadeRight">
+            <div class="tour-package">
+                <div class="tour-img">
+                    <img src="img/kazak.webp" alt="Tour Package 1">
+                </div>
+                <div class="tour-details">
+                    <h3>Kazakhstan</h3>
+                    <p style="color: rgb(19, 149, 149); margin: 0;"> 4 Nights 5 Days</p>
+                    <p class="price">₹65,000</p>
+                    <p>Nestled in the heart of Central Asia, Kazakhstan stands as a captivating destination, stretching
+                        its vast and diverse landscapes across the region. Positioned at a distance ranging from 220 to
+                        440 kilometers from the western reaches of the country, Kazakhstan boasts a remarkable fusion of
+                        natural beauty and cultural heritage. </p>
+                    <div class="rating">4.5 <i class="fa-regular fa-star"></i></div>
+                    <button class="more-details-btn" onclick="toggleDetails('details1')">More Details</button>
+                    <button class="book-now-btn" onclick="redirectToContact()">Book Now</button>
+                </div>
+            </div>
+            <div id="details1" class="additional-details" style="display: none;">
+                <h5>Day 1</h5>
+                <h6>Pick up from Airport Stay</h6>
+
+                <h5>Day 2</h5>
+                <h6>Fresh up</h6>
+                <h6>City tour</h6>
+                <ul class="package-li">
+                    <li>Sightseeing at 10 AM</li>
+                    <li>Cathedral church</li>
+                    <li>Panfi lov park</li>
+                </ul>
+                <h6>Kok tobe ( cable car )</h6>
+                <h6>Drop at hotel 7PM Stay</h6>
+                <h5>Day 3</h5>
+                <h6>Fresh up</h6>
+                <h6>Pick up at 6AM Sightseeing</h6>
+                <ul class="package-li">
+                    <li>Kolsay lake</li>
+                    <li>Charyn canyon</li>
+                    <li>Moon canyon</li>
+                    <li>Black canyon</li>
+                    <li>Charyn river</li>
+                    <li> Drop at 10:30 PM Stay</li>
+                </ul>
+
+                <h5>Day 4</h5>
+                <h6>Fresh up</h6>
+                <h6>Sightseeing at 10AM</h6>
+                <ul class="package-li">
+                    <li>Musuem</li>
+                    <li>Shymbulak ( Cable car )</li>
+                    <li>Medeu</li>
+                    <li>Drop at hotel 7PM Stay</li>
+                </ul>
+
+                <h5>Day 5</h5>
+                <h6>Fresh up</h6>
+                <h6>Shopping at Green Bazar</h6>
+                <h6>Drop at Airport</h6>
+                <br>
+
+                <h5>Package Includes</h5>
+                <ul class="package-li">
+                    <li>Pick up & drop from Airport</li>
+                    <li>Malayali travel guide</li>
+                    <li>Transportation by car</li>
+                    <li>2 Sim cards ( 10gb each )</li>
+                    <li>Sightseeing</li>
+                    <li>Cable car tickets ( koktobe & shymbulak )</li>
+                    <li>Musuem tickets</li>
+                    <li>4 Night stay</li>
+                </ul>
+                <h5>Package Excludes</h5>
+                <ul class="package-li">
+                    <li>Tips to the guide or driver</li>
+                    <li>Meals other than specifi ed in the inclusions</li>
+                    <li>Travel insurance and other personal expenses</li>
+                    <li>Anything not mentioned in the inclusions</li>
+                </ul>
+
+                <h5>INVOICE</h5>
+                <ul class="package-li">
+                    <li>4N stay in HOTEL Kazakhstan Suits (4*)</li>
+                    <li>2 adults Traveling together per head:-65000 /-</li>
+                    <li>Minimum 2 person</li>
+                </ul>
+
+                <h5>Cancellation Policy:</h5>
+                <h6>Confirm the booking at the earliest with 50% payment in advance so that we could confirm the rooms
+                    accordingly.</h6>
+                <p>A cancellation charge of 50% of the tour cost will be applicable for the passenger canceling before
+                    25
+                    days of departure and 100 % of the tour cost will be levied as the cancellation charge within 24
+                    days prior to the departure.
+                </p>
+                <p>Period of Cancellation Cancellation Charges
+                    25 Days before Departure 50% of the Tour Cost
+                    Within 24 days prior to Departure 100% of the Tour Cost.</p>
+            </div>
+        </div>
+
+        <!-- second package -->
+        <div class="tour-package-main animate fadeLeft">
+            <div class="tour-package">
+                <div class="tour-img">
+                    <img src="img/Bali.webp" alt="Tour Package 2">
+                </div>
+                <div class="tour-details">
+                    <h3>Bali</h3>
+                    <p style="color: rgb(19, 149, 149); margin: 0;"> 4 Nights 5 Days</p>
+                    <p class="price">₹59,999</p>
+                    <p>There is no other place like Bali. A magical blend of a colourful culture, friendly people,
+                        stunning nature, countless activities, tropical weather, culinary delights, vibrant nightlife,
+                        and beautiful accommodation. Bali is rated regularly as one of the best travel destinations in
+                        the world - for very good reasons. There is something great for everyone to explore and
+                        discover.</p>
+                    <div class="rating">4.6 <i class="fa-regular fa-star"></i></div>
+                    <button class="more-details-btn" onclick="toggleDetails('details2')">More Details</button>
+                    <button class="book-now-btn" onclick="redirectToContact()">Book Now</button>
+                </div>
+            </div>
+            <div id="details2" class="additional-details" style="display: none;">
+                <h5>Day 1</h5>
+                <h6>Welcome to Bali</h6>
+                <ul class="package-li">
+                    <li>Arrival and Transfer in
+                        Tanah lot temple
+                        (highly depend on flight timings and arrival)</li>
+
+                </ul>
+                <h5>Day 2</h5>
+                <ul class="package-li">
+                    <li>Breakfast</li>
+                    <li>Water Sport including 1 Round Banana boat</li>
+                    <li>Padang Padang beach / Melasti beach</li>
+                    <li>Uluwattu sunset tour - Uluwatu temple</li>
+                </ul>
+                <h5>Day 3</h5>
+                <ul class="package-li">
+                    <li>Breakfast</li>
+                    <li>Tegenungan waterfalls</li>
+                    <li>Ubud palace - Rice Terrace</li>
+                    <li>Kintamani</li>
+                    <li>Coff ee plantation</li>
+                    <li>Tirta Empul holy spring Temple</li>
+                </ul>
+
+                <h5>Day 4</h5>
+                <ul class="package-li">
+                    <li>Breakfast (Carry in a box)</li>
+                    <li>Nusa penida island tour with lunch</li>
+                    <li>Angel's brocken beach, crystal, billa bong beach, killing king beach</li>
+                </ul>
+
+                <h5>Day 5</h5>
+                <ul class="package-li">
+                    <li>Breakfast </li>
+                    <li>Departure transfer</li>
+                </ul>
+
+                <h5>Package Includes</h5>
+                <ul class="package-li">
+                    <li>Airfare and visa charges (Visa on arrival fees approximately USD 35)</li>
+                    <li>4 nights stay with breakfast</li>
+                    <li>AC private car with English speaking guide as driver</li>
+                    <li>Entrance tickets and parking fees</li>
+                    <li>Sightseeing</li>
+                    <li>Sightseeing as per itinerary</li>
+                    <li>Return Fast boat to Nusa Penida</li>
+                    <li>Mineral water on sightseeing days</li>
+                </ul>
+                <h5>Package Excludes</h5>
+                <ul class="package-li">
+                    <li>Tips to the guide or driver</li>
+                    <li>Meals other than specifi ed in the inclusions</li>
+                    <li>Travel insurance and other personal expenses</li>
+                    <li>Anything not mentioned in the inclusions</li>
+                </ul>
+                <h5>INVOICE</h5>
+                <ul class="package-li">
+                    <li>4N stay in Siesta Legian Hotel (3* )- 2 adults Traveling together per head :-55000/-</li>
+                    <li>4N stay in Champlung Mas Hotel (3*)-2 adults Traveling together per head : - 55000/-</li>
+                    <li>4N stay in Ramayana Suits (4*)- 2 adults Traveling together per head:-59999/-</li>
+                </ul>
+
+                <h5>Cancellation Policy:</h5>
+                <h6>Confirm the booking at the earliest with 50% payment in advance so that we could confirm the rooms
+                    accordingly.</h6>
+                <p>A cancellation charge of 50% of the tour cost will be applicable for the passenger canceling before
+                    25
+                    days of departure and 100 % of the tour cost will be levied as the cancellation charge within 24
+                    days prior to the departure.
+                </p>
+                <p>Period of Cancellation Cancellation Charges
+                    25 Days before Departure 50% of the Tour Cost
+                    Within 24 days prior to Departure 100% of the Tour Cost.</p>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- Third package -->
+        <div class="tour-package-main animate fadeRight">
+            <div class="tour-package">
+                <div class="tour-img">
+                    <img src="img/thailand.webp" alt="Tour Package 3">
+                </div>
+                <div class="tour-details">
+                    <h3>Thailand</h3>
+                    <p style="color: rgb(19, 149, 149); margin: 0;"> 3 Nights 4 Days</p>
+                    <p class="price">₹39,999</p>
+                    <p>Thailand, a land of rich cultural heritage and breathtaking natural beauty, beckons travelers
+                        with its myriad wonders. With a history that spans centuries, Thailand offers a tapestry of
+                        experiences, from ancient temples to bustling markets and serene beaches.</p>
+                    <div class="rating">4.7 <i class="fa-regular fa-star"></i></div>
+                    <button class="more-details-btn" onclick="toggleDetails('details3')">More Details</button>
+                    <button class="book-now-btn" onclick="redirectToContact()">Book Now</button>
+                </div>
+            </div>
+            <div id="details3" class="additional-details" style="display: none;">
+                <h5>Day 1</h5>
+                <h6>Arrival At Bangkok</h6>
+                <ul class="package-li">
+                    <li>Arrival day fresh up with breakfast</li>
+                    <li>Tiger Topia Sriracha</li>
+                    <li>Pattaya City Tour</li>
+                    <li>Check in at Pattaya hotel</li>
+                    <li>Overnight stay at hotel</li>
+
+                </ul>
+                <h5>Day 2</h5>
+                <h6>Coral Island Tour</h6>
+                <ul class="package-li">
+                    <li>Breakfast</li>
+                    <li>Coral Island Tour in Speed Boat with lunch</li>
+                    <li>Famous For Its Colorful Corals And Marine Life.( Activities done In additional Cost).
+                    </li>
+                    <li>Overnight stay at hotel</li>
+                </ul>
+                <h5>Day 3</h5>
+                <h6>Check out- Pattaya ,Floating Market-Check in</h6>
+                <ul class="package-li">
+                    <li>Breakfast</li>
+                    <li>Check out from Pattaya hotel</li>
+                    <li>Pattaya Floating market with rowing boat</li>
+                    <li>Kintamani</li>
+                    <li>Check in at Bangkok hoteln</li>
+                    <li>Overnight stay at hotel</li>
+
+                </ul>
+
+                <h5>Day 4</h5>
+                <ul class="package-li">
+                    <li>Breakfast From Hotel</li>
+                    <li>Bangkok city tour</li>
+                    <li>The Golden Buddha & Marble Buddha</li>
+                    <li>Overnight stay at hotel.</li>
+                    <li>Check out from Bangkok hotel</li>
+                    <li>Departure.</li>
+                </ul>
+
+                <h5>Day 5</h5>
+                <ul class="package-li">
+                    <li>Breakfast</li>
+                    <li>Departure transfer</li>
+
+                </ul>
+
+                <h5>Package Includes</h5>
+                <ul class="package-li">
+                    <li>Airfare (Kochi - Bangkok - Kochi)</li>
+                    <li>4 nights stay </li>
+                    <li>4 breakfasts</li>
+                    <li>02 bottles of water per person per day</li>
+                    <li>Pattaya City Tour</li>
+                    <li>Pattaya Safari world Show.</li>
+                    <li>Coral Island Tour in Speed Boat with lunch</li>
+                    <li>Pattaya Floating market with rowing boats.</li>
+                    <li>Bangkok temple tour (Golden Buddha & Marble Temple) ∙ Malayalam speaking guide service
+                        throughout all Tours and Transfers.</li>
+                    <li>All Tours & Transfers on private basis</li>
+                    <li>BKK APT - PTY HTL - BKK HTL - BKK APT.</li>
+                </ul>
+                <h5>Package Excludes</h5>
+                <ul class="package-li">
+                    <li>Dinner</li>
+                    <li>Show money At Airport If Asked</li>
+                    <li>Use Of Vehicle Other Than The Specifi ed Itinerary</li>
+                    <li>Early Check-In And Late Check-Out</li>
+                    <li>Anything Which Is Not Mentioned In The Inclusions</li>
+                </ul>
+                <h5>INVOICE</h5>
+                <ul class="package-li">
+                    <li>2N PATTAYA 2N BANGKOK stay Hotel (3* )</li>
+                    <li>1N Bangkok
+                        Princeton Hotel</li>
+                    <li>2N
+                        Pattaya
+                        Golden Beach Hotel</li>
+                    <li>2 adults Traveling together per head : -39,999/</li>
+                </ul>
+
+                <h5>Cancellation Policy:</h5>
+                <h6>Confirm the booking at the earliest with 50% payment in advance so that we could confirm the rooms
+                    accordingly.</h6>
+                <p>A cancellation charge of 50% of the tour cost will be applicable for the passenger canceling before
+                    25
+                    days of departure and 100 % of the tour cost will be levied as the cancellation charge within 24
+                    days prior to the departure.
+                </p>
+                <p>Period of Cancellation Cancellation Charges
+                    25 Days before Departure 50% of the Tour Cost
+                    Within 24 days prior to Departure 100% of the Tour Cost.</p>
+
+            </div>
+        </div>
+
+        <!-- Fourth package -->
+        <div class="tour-package-main animate fadeLeft">
+            <div class="tour-package">
+                <div class="tour-img">
+                    <img src="img/malasia2.webp" alt="Tour Package 2">
+                </div>
+                <div class="tour-details">
+                    <h3>Malaysia</h3>
+                    <p style="color: rgb(19, 149, 149); margin: 0;"> 3 Nights 4 Days</p>
+                    <p class="price">₹29,999</p>
+                    <p>Malaysia is one of the biggest tourist attractions in the South East Asia and Malaysia tour
+                        package is one of the most searched items on the internet. Every year hundreds of thousands of
+                        tourists visited and explored this beautiful country. Malaysia truly has some of the fascinating
+                        tourist destinations in the world. Malaysia is a place of diversity and so many Malaysia holiday
+                        packages for visitors to explore.</p>
+                    <div class="rating">4.8 <i class="fa-regular fa-star"></i></div>
+                    <button class="more-details-btn" onclick="toggleDetails('details4')">More Details</button>
+                    <button class="book-now-btn" onclick="redirectToContact()">Book Now</button>
+                </div>
+            </div>
+            <div id="details4" class="additional-details" style="display: none;">
+                <h5>Day 1</h5>
+                <h6>Airport - KUL Hotel & Putrajaya</h6>
+                <ul class="package-li">
+                    <li>6:20 AM Arrival at KLIA 2 (AirAsia - AK 38) Primary Fresh Up at Airportt</li>
+                    <li>10:00 AM Tour to PUTRAJAYA Drop off to Hotel (You will have to wait at the lobby till check in
+                        time)</li>
+                    <li>2.00 PM Check in to Hotel (Early check in is subject to availability)-Hotel Arenaa Staror
+                        Similar</li>
+                    <li>6:00 PM Bukit Bintang (Pick and Drop)</li>
+
+
+                </ul>
+                <h5>Day 2</h5>
+                <h6>KUL Hotel – Genting Day Trip– Kul Hotel</h6>
+                <ul class="package-li">
+                    <li>8:00 AM Breakfast at Hotel (Complimentary)</li>
+                    <li>10:00 AM Tour to BATU CAVES, CHIN SWEE Temple and GENTING HIGHLAND with CABLE CAR Tickets (2
+                        way)</li>
+                    <li>6:00 PM Drop off to Hotel from Genting Highland
+                    </li>
+                    <li>Overnight stay at hotel</li>
+                </ul>
+                <h5>Day 3</h5>
+                <h6>KUL Hotel – City Tour & Add on</h6>
+                <ul class="package-li">
+                    <li>8:00 AM Breakfast at Hotel (Complimentary)</li>
+                    <li>KL CITY TOUR (maximum 4hr)</li>
+                    <li>Visit National Mosque, National Monument, Freedom Square, King's Palace, KL Tower Observation
+                        Deck entry ticket & Twin Tower Photo Stopy</li>
+                    <li>KLCC AQUARIA Entry Ticket</li>
+                    <li>Check in at Bangkok hoteln</li>
+                    <li>KL BIRD PARK Entry Ticket</li>
+
+                </ul>
+
+                <h5>Day 4</h5>
+                <h6>KUL Hotel – Shopping– KLIA 2</h6>
+                <ul class="package-li">
+                    <li>8:00 AM Breakfast at Hotel ( Complimentary)</li>
+                    <li>Check out from Hotel before starting Tour (12pm is normal check out time)</li>
+                    <li>Free for Shopping (If need Vehicle, extra charge will be added)</li>
+                    <li>Transfer to Airport for Return</li>
+
+                </ul>
+
+
+
+                <h5>Package Includes</h5>
+                <ul class="package-li">
+                    <li>Air Tickets</li>
+                    <li>Break Fast</li>
+                    <li>Airport Pick and Drop</li>
+                    <li>Tour Guide</li>
+                    <li>Package inclusions Tickets</li>
+                    
+                </ul>
+                <h5>Package Excludes</h5>
+                <ul class="package-li">
+                    <li>Any Item Not Specifi ed in The Inclusions</li>
+                    <li>Water Bottles</li>
+                    <li>Any Item Not Specifi ed In The Above Itinerary Will Incur Supplement Charges - Porterage Service</li>
+                   
+                </ul>
+                <h5>INVOICE</h5>
+                <ul class="package-li">
+
+                    <li>1 ADULT -29,999/li>
+                    <li>1 CHILD -20,000</li>
+                    <li>COST INCLUSIVE OF: FLIGHT TICKET + HOTEL + BREAKFAST + TRANSFER & SIGHTSEEING +AIRPORT PICKUP &
+                        DROP</li>
+                </ul>
+                <h6>Payment INR Remark
+                    Booking advance 50 % At the time of booking
+                    2nd Payment Balance amount Before 1 week</h6>
+                <p>Advance payment will be Rs. 40,000 only and the balance amount should be settled before 15 days of
+                    departure. The advance amount will not be refunded under any circumstances.</p>
+
+                    <h5>Documents Required For VISA</h5>
+                    <h6>Scanned Passport copy with minimum validity of 6 months
+                        Soft Copy of Passport size photo with given
+                        specifications</h6>
+
+                <h5>Cancellation Policy:</h5>
+                <h6>Confirm the booking at the earliest with 50% payment in advance so that we could confirm the rooms
+                    accordingly.</h6>
+                <p>A cancellation charge of 50% of the tour cost will be applicable for the passenger canceling before
+                    25
+                    days of departure and 100 % of the tour cost will be levied as the cancellation charge within 24
+                    days prior to the departure.
+                </p>
+                <p>Period of Cancellation Cancellation Charges
+                    25 Days before Departure 50% of the Tour Cost
+                    Within 24 days prior to Departure 100% of the Tour Cost.</p>
+
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+    <div class="floating_btn">
+        <a target="_blank" href="https://wa.me/+918089812666" style="text-decoration: none;">
+            <div class="contact_icon">
+                <i class="fa fa-whatsapp my-float"></i>
+            </div>
+        </a>
+        <p class="text_icon">Talk to us?</p>
+          
+    </div>
+    </div>
+
+
+    <div id="book-me">
+        <button class="custom-package-btn" onclick="openForm()"> Custom Package </button>
+    </div>
+
+    <!-- scripts -->
+
+    <!--header and footer script start-->
+    <script>
+        function includeHTML(filePath, targetElement) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', filePath, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    targetElement.insertAdjacentHTML('beforebegin', xhr.responseText);
+                }
+            };
+            xhr.send();
+        }
+        var headerPath = 'header.html';
+        var footerPath = 'footer.html';
+        var headerContainer = document.getElementById('header-container');
+        includeHTML(headerPath, headerContainer);
+
+        var xhrFooter = new XMLHttpRequest();
+        xhrFooter.open('GET', footerPath, true);
+        xhrFooter.onreadystatechange = function () {
+            if (xhrFooter.readyState === 4 && xhrFooter.status === 200) {
+                document.body.insertAdjacentHTML('beforeend', xhrFooter.responseText);
+            }
+        };
+        xhrFooter.send();
+    </script>
+    <!--header and footer script end-->
+
+    <script>
+        function redirectToContact() {
+            // Use window.location.href to redirect to the contact.html page
+            window.location.href = 'contact.html#contact-form';
+        }
+    </script>
+    <script>
+        function toggleDetails(detailsId) {
+            var details = document.getElementById(detailsId);
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+    </script>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector(".nav-links");
+            navLinks.classList.toggle("show");
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const homeSections = document.querySelectorAll('.home-section');
+
+            homeSections.forEach((homeSection) => {
+                const images = homeSection.querySelectorAll('.background-image');
+                let currentImageIndex = 0;
+
+                setInterval(() => {
+                    images[currentImageIndex].classList.remove('active');
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    images[currentImageIndex].classList.add('active');
+                }, 5000);
+            });
+        });
+
+    </script>
+
+
+    <script src="js/fade-animate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <button class="scroll-to-top" id="scroll-to-top" onclick="scrollToTop()">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+</body>
+
+</html>
